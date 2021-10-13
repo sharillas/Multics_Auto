@@ -1,32 +1,21 @@
 
 #!/bin/bash
-echo "
-#########################################################################
-#                                                                       #
-#   +---------oOOO------(_)---------oOOO--------+                       #
-#   |                                           |          		#
-#   |                                           |                       #
-#   |-------------------------------------------|                       #
-#   |        Auto Install CardServerProxy       |                       #
-#   |   -----> Multics Version r82x64   <-----  |                       #
-#   |                   2021                    |                       #
-#   |       Automated Installation script       |                       #
-#   |           Written by: sharillas	        |                       #
-#   |                                           |                       #
-#   |                  ooO                      |                       #                    
-#   +-----------------(   )-Ooo-----------------+                	#
-#                      \ ( (   )                                        #
-#                       \_))  / 					#
-#                          (_/                                          #
-#                                                                       #
-#     MultiCS auto install on server with Ubuntu and Debian system.     #
-#                                                                       #
-#########################################################################"
-sleep 4
-
 EDITOR=vim
 RED='\033[0;41;30m'
 STD='\033[0;0;39m'
+echo "\033[0;41;30m
+#################################################################
+#       |-------------------------------------------|           #
+#       |        Auto Install CardServerProxy       |           #
+#       |   -----> Multics Version r82x64   <-----  |           #
+#       |                   2021                    |           #
+#       |       Automated Installation script       |           #
+#       |           Written by: sharillas	    |           #
+#       |                                           |           #
+# MultiCS auto install on server with Ubuntu and Debian system. #
+#                                                               #
+#################################################################"
+sleep 4
 
 pause(){
   read -p "Press [Enter] key to continue..." fackEnterKey
@@ -50,9 +39,8 @@ show_menus() {
 	echo -e "1. MultCS r82 x64 \e[33m (original by evileyes) \e[0m"
 	echo "2. Exit"
 	echo ""
-echo  -e "\e[1;97;41mATENCAO!!:                            ${STD}"
-
-echo  -e "\e[1;97;41mAntes de Proceder a instalacao,  ${STD}"
+echo  -e "\e[1;97;41mATENCAO!!:                                 ${STD}"
+echo  -e "\e[1;97;41mAntes de Proceder a instalacao,            ${STD}"
 echo  -e "\e[1;97;41mrecomenda se que salve os seus dados       ${STD}"
 	echo ""
 
