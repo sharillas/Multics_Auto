@@ -93,10 +93,16 @@ wget ${Profiles} -O /var/etc/Profiles.cfg || echo "Error: Couldn't connect to ${
 IpToCountry="https://github.com/sharillas/Multics_Auto/raw/main/multics_Versions/Multics.r82x64/IpToCountry.csv"
 wget ${IpToCountry} -O /var/etc/IpToCountry.csv || echo "Error: Couldn't connect to ${IpToCountry}"
 
+sleep 4
+sudo ln -s /var/etc/script/multics_Start_Stop_Script.sh /sbin/multics
+sleep 2
+
 echo "########################## MultiCS r82_x64 ##########################" >> /etc/crontab
 
 echo "*/1 *  * * *  root    /var/etc/script/./multics_check_script.sh >>/var/log/multics_check_script.log" >> /etc/crontab
 echo "" >> /etc/crontab
+
+sudo multics start
 
 service cron restart
 
