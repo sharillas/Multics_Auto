@@ -40,7 +40,11 @@ chmod 755 /var/etc/bin/multics.x64
 multicscfg="https://github.com/sharillas/Multics_Auto/raw/main/multics_Versions/Multics.r82x64/multics.cfg"
 wget ${multicscfg} -O /var/etc/multics.cfg || echo "Error: Couldn't connect to ${multicscfg}"
 
-autorun="https://github.com/sharillas/Multics_Auto/raw/main/multics_Versions/Multics.r82x64/autorun.sh"
+multics_Start_Stop_Script="https://github.com/sharillas/Multics_Auto/raw/main/multics_Versions/Multics.r82x64/autorun.sh"
+wget ${autorun} -O /var/etc/script/multics_Start_Stop_Script.sh || echo "Error: Couldn't connect to ${multics_Start_Stop_Script}"
+chmod 755 /var/etc/script/multics_Start_Stop_Script.sh
+
+autorun="https://github.com/sharillas/Multics_Auto/raw/main/multics_Versions/multics_Start_Stop_Script"
 wget ${autorun} -O /var/etc/script/autorun.sh || echo "Error: Couldn't connect to ${autorun}"
 chmod 755 /var/etc/script/autorun.sh
 
