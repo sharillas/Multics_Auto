@@ -87,7 +87,7 @@ wget ${css} -O /var/etc/multics.css || echo "Error: Couldn't connect to ${css}"
 Newcamd_users="https://github.com/sharillas/Multics_Auto/raw/main/multics_Versions/Multics.r82x64/Newcamd_users.cfg"
 wget ${Newcamd_users} -O /var/etc/Newcamd_users.cfg || echo "Error: Couldn't connect to ${Newcamd_users}"
 
-Profailes="https://github.com/sharillas/Multics_Auto/raw/main/multics_Versions/Multics.r82x64/Profiles.cfg"
+Profiles="https://github.com/sharillas/Multics_Auto/raw/main/multics_Versions/Multics.r82x64/Profiles.cfg"
 wget ${Profiles} -O /var/etc/Profiles.cfg || echo "Error: Couldn't connect to ${Profiles}"
 
 IpToCountry="https://github.com/sharillas/Multics_Auto/raw/main/multics_Versions/Multics.r82x64/IpToCountry.csv"
