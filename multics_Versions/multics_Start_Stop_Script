@@ -1,0 +1,52 @@
+#!/bin/bash
+
+CAMNAME="Multics CardServerProxy R82x84"
+CAM_BIN_PATH=/var/etc/bin
+CAM_BIN=multics.x64
+CAM_CFG_PATH=/var/etc
+CAM_CFG_NAME=multics.cfg
+CAM_LOG_PATH=/var/log/multics_Start_Stop_log
+####################################################
+start_cam ()
+{
+$CAM_BIN_PATH/$CAM_BIN -b -C $CAM_CFG_PATH/$CAM_CFG_NAME 
+}
+
+
+stop_cam ()
+{
+pkill $CAM_BIN
+}
+
+
+case "$1" in
+
+start)
+echo "[SCRIPT] $1: $CAMNAME"
+start_cam
+;;
+
+
+stop)
+echo "[SCRIPT] $1: $CAMNAME"
+stop_cam
+;;
+
+
+restart)
+echo "Restarting $CAMNAME"
+pkill $CAM_BIN 
+sleep 1
+$CAM_BIN_PATH/$CAM_BIN -b -C $CAM_CFG_PATH/$CAM_CFG_NAME
+;;
+
+
+
+*)
+echo "Allowed options  > start | stop | restart <"
+exit 1
+;;
+
+
+esac
+exit 0
