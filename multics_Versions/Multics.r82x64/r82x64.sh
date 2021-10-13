@@ -1,27 +1,26 @@
-#####################################################################################
-#                             \\\|///                                                                                                              #
-#                          \\~~ ~~//                                                                                                           #
-#                         (  @ @  )                                                                                   	        	        #
-#    +---------oOOO------(_)---------oOOO--------+                                                             		        #
-#   |                                                        |          					        #
-#   |                                                        |                                                			        #
-#   |--------------------------------------------------------|                                               			        #
-#   |               Installation source               |                                                                                     #
-#   |   ----->    www.newcccam.net      <-----|                                              			        #
-#   |   ----->    www.cccamcs.com       <-----|                                              			        #
-#   |                         2020                        |                    				                      #
-#   |       Automated Installation script        |                                          			        #
-#   |               Written by: groupsat	      |                             		                                    #
-#   |                www.multics.info                |                           				        #
-#   |                  ooO                                |                      				        #                    
-#  +-----------------(   )-Ooo--------------------------+                					        #
-#                      \ ( (   )                                                                				        #
-#                       \_)) / 								        #
-#                          (_/                                                                   			        #
-#                                                                                                 			        #
-#               Purpose: Installing MultiCS r82_x64 on a bare Ubuntu and Debian  system.     	        #
-#                                                                                            	                 		        #
-#####################################################################################"
+#!/bin/bash
+echo "
+#########################################################################
+#                                                                       #
+#   +---------oOOO------(_)---------oOOO--------+                       #
+#   |                                           |          		#
+#   |                                           |                       #
+#   |-------------------------------------------|                       #
+#   |        Auto Install CardServerProxy       |                       #
+#   |   -----> Multics Version r82x64   <-----  |                       #
+#   |                   2021                    |                       #
+#   |       Automated Installation script       |                       #
+#   |           Written by: sharillas	        |                       #
+#   |                                           |                       #
+#   |                  ooO                      |                       #                    
+#   +-----------------(   )-Ooo-----------------+                	#
+#                      \ ( (   )                                        #
+#                       \_))  / 					#
+#                          (_/                                          #
+#                                                                       #
+#     MultiCS auto install on server with Ubuntu and Debian system.     #
+#                                                                       #
+#########################################################################"
 
 echo "Installation script for automated MultiCS r82_x64 installation"
 echo -e "\e[5m Please Wait ...\e[0m"
@@ -34,60 +33,60 @@ mkdir /var/etc
 mkdir /var/etc/bin
 mkdir /var/etc/script
 	     
-multics="https://newcccam.net/install_multics/r82x64/multics.x64"
+multics="https://github.com/sharillas/Multics_Auto/raw/main/multics_Versions/Multics.r82x64/multics.x64"
 wget ${multics} -O /var/etc/bin/multics.x64 || echo "Error: Couldn't connect to ${multics}"
 chmod 755 /var/etc/bin/multics.x64
 
-multicscfg="https://newcccam.net/install_multics/r82x64/multics.cfg"
+multicscfg="https://github.com/sharillas/Multics_Auto/raw/main/multics_Versions/Multics.r82x64/multics.cfg"
 wget ${multicscfg} -O /var/etc/multics.cfg || echo "Error: Couldn't connect to ${multicscfg}"
 
-autorun="https://newcccam.net/install_multics/r82x64/autorun.sh"
+autorun="https://github.com/sharillas/Multics_Auto/raw/main/multics_Versions/Multics.r82x64/autorun.sh"
 wget ${autorun} -O /var/etc/script/autorun.sh || echo "Error: Couldn't connect to ${autorun}"
 chmod 755 /var/etc/script/autorun.sh
 
-Cache="https://newcccam.net/install_multics/r82x64/Cache.cfg"
+Cache="https://github.com/sharillas/Multics_Auto/raw/main/multics_Versions/Multics.r82x64/Cache.cfg"
 wget ${Cache} -O /var/etc/Cache.cfg || echo "Error: Couldn't connect to ${Cache}"
 
-Camd35_Servers="https://newcccam.net/install_multics/r82x64/Camd35_Servers.cfg"
+Camd35_Servers="https://github.com/sharillas/Multics_Auto/raw/main/multics_Versions/Multics.r82x64/Camd35_Servers.cfg"
 wget ${Camd35_Servers} -O /var/etc/Camd35_Servers.cfg || echo "Error: Couldn't connect to ${Camd35_Servers}"
 
-Camd35_Users="https://newcccam.net/install_multics/r82x64/Camd35_Users.cfg"
+Camd35_Users="https://github.com/sharillas/Multics_Auto/raw/main/multics_Versions/Multics.r82x64/Camd35_Users.cfg"
 wget ${Camd35_Users} -O /var/etc/Camd35_Users.cfg || echo "Error: Couldn't connect to ${Camd35_Users}"
 
-channelinfo="https://newcccam.net/install_multics/CCcam.channelinfo"
+channelinfo="https://github.com/sharillas/Multics_Auto/raw/main/multics_Versions/Multics.r82x64/CCcam.channelinfo"
 wget ${channelinfo} -O /var/etc/CCcam.channelinfo || echo "Error: Couldn't connect to ${channelinfo}"
 
-providers="https://newcccam.net/install_multics/CCcam.providers"
+providers="https://github.com/sharillas/Multics_Auto/raw/main/multics_Versions/Multics.r82x64/CCcam.providers"
 wget ${providers} -O /var/etc/CCcam.providers || echo "Error: Couldn't connect to ${providers}"
 
-CCcamcs_Servers="https://newcccam.net/install_multics/r82x64/CCcamcs_Servers.cfg"
+CCcamcs_Servers="https://github.com/sharillas/Multics_Auto/raw/main/multics_Versions/Multics.r82x64/CCcamcs_Servers.cfg"
 wget ${CCcamcs_Servers} -O /var/etc/CCcamcs_Servers.cfg || echo "Error: Couldn't connect to ${CCcamcs_Servers}"
 
-CCcamcs_Users="https://newcccam.net/install_multics/r82x64/CCcamcs_Users.cfg"
+CCcamcs_Users="https://github.com/sharillas/Multics_Auto/raw/main/multics_Versions/Multics.r82x64/CCcamcs_Users.cfg"
 wget ${CCcamcs_Users} -O /var/etc/CCcamcs_Users.cfg || echo "Error: Couldn't connect to ${CCcamcs_Users}"
 
-Cs378x_Servers="https://newcccam.net/install_multics/r82x64/Cs378x_Servers.cfg"
+Cs378x_Servers="https://github.com/sharillas/Multics_Auto/raw/main/multics_Versions/Multics.r82x64/Cs378x_Servers.cfg"
 wget ${Cs378x_Servers} -O /var/etc/Cs378x_Servers.cfg || echo "Error: Couldn't connect to ${Cs378x_Servers}"
 
-Cs378x_Users="https://newcccam.net/install_multics/r82x64/Cs378x_Users.cfg"
+Cs378x_Users="https://github.com/sharillas/Multics_Auto/raw/main/multics_Versions/Multics.r82x64/Cs378x_Users.cfg"
 wget ${Cs378x_Users} -O /var/etc/Cs378x_Users.cfg || echo "Error: Couldn't connect to ${Cs378x_Users}"
 
-MGcamd_Users="https://newcccam.net/install_multics/r82x64/MGcamd_Users.cfg"
+MGcamd_Users="https://github.com/sharillas/Multics_Auto/raw/main/multics_Versions/Multics.r82x64/MGcamd_Users.cfg"
 wget ${MGcamd_Users} -O /var/etc/MGcamd_Users.cfg || echo "Error: Couldn't connect to ${MGcamd_Users}"
 
-MGcamdNew_Servers="https://newcccam.net/install_multics/r82x64/MGcamdNew_Servers.cfg"
+MGcamdNew_Servers="https://github.com/sharillas/Multics_Auto/raw/main/multics_Versions/Multics.r82x64/MGcamdNew_Servers.cfg"
 wget ${MGcamdNew_Servers} -O /var/etc/MGcamdNew_Servers.cfg || echo "Error: Couldn't connect to ${MGcamdNew_Servers}"
 
-css="https://newcccam.net/install_multics/multics.css"
+css="https://github.com/sharillas/Multics_Auto/raw/main/multics_Versions/Multics.r82x64/multics.css"
 wget ${css} -O /var/etc/multics.css || echo "Error: Couldn't connect to ${css}"
 
-Newcamd_users="https://newcccam.net/install_multics/r82x64/Newcamd_users.cfg"
+Newcamd_users="https://github.com/sharillas/Multics_Auto/raw/main/multics_Versions/Multics.r82x64/Newcamd_users.cfg"
 wget ${Newcamd_users} -O /var/etc/Newcamd_users.cfg || echo "Error: Couldn't connect to ${Newcamd_users}"
 
-Profailes="https://newcccam.net/install_multics/r82x64/Profailes.cfg"
-wget ${Profailes} -O /var/etc/Profailes.cfg || echo "Error: Couldn't connect to ${Profailes}"
+Profailes="https://github.com/sharillas/Multics_Auto/raw/main/multics_Versions/Multics.r82x64/Profiles.cfg"
+wget ${Profiles} -O /var/etc/Profiles.cfg || echo "Error: Couldn't connect to ${Profiles}"
 
-IpToCountry="https://newcccam.net/install_multics/IpToCountry.csv"
+IpToCountry="https://github.com/sharillas/Multics_Auto/raw/main/multics_Versions/Multics.r82x64/IpToCountry.csv"
 wget ${IpToCountry} -O /var/etc/IpToCountry.csv || echo "Error: Couldn't connect to ${IpToCountry}"
 
 echo "########################## MultiCS r82_x64 ##########################" >> /etc/crontab
