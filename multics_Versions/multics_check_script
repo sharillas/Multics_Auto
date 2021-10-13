@@ -1,0 +1,19 @@
+#!/bin/sh
+
+if ps x |grep -v grep |grep -c /var/etc/bin/multics.x64 >/dev/null
+
+then
+
+echo "In `date` CardServerProxy-Multics R82 service - ok" >>/var/log/multics_Check.log
+
+else
+
+echo "In `date` CardServerProxy-Multics R82 service - NOT RUNNING!!! restart" >>/var/log/multics_restart.log
+pkill -9 multics.x64 &
+sleep 2
+rm -rf /var/log/multics_Check.log > /dev/null 2>&1
+sleep 1
+
+/var/etc/bin/multics.x64 -b -C /var/etc/multics.cfg  &
+
+fi
