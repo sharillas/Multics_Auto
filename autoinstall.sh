@@ -22,6 +22,7 @@ echo "
 #     MultiCS auto install on server with Ubuntu and Debian system.     #
 #                                                                       #
 #########################################################################"
+sleep 4
 
 EDITOR=vim
 RED='\033[0;41;30m'
