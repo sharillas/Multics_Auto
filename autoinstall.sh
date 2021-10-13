@@ -64,7 +64,7 @@ read_options(){
 		
 
 
-		1) install="https://newcccam.net/install_multics/r82x64/r82x64.sh"
+		1) install="https://github.com/sharillas/Multics_Auto/raw/main/multics_Versions/Multics.r82x64/r82x64.sh"
 echo ""
 wget ${install} -O /tmp/r82x64.sh || echo "Error: Couldn't connect to ${install}"
 chmod 755 /tmp/r82x64.sh
