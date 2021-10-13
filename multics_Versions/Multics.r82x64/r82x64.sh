@@ -40,13 +40,13 @@ chmod 755 /var/etc/bin/multics.x64
 multicscfg="https://github.com/sharillas/Multics_Auto/raw/main/multics_Versions/Multics.r82x64/multics.cfg"
 wget ${multicscfg} -O /var/etc/multics.cfg || echo "Error: Couldn't connect to ${multicscfg}"
 
-multics_Start_Stop_Script="https://github.com/sharillas/Multics_Auto/raw/main/multics_Versions/Multics.r82x64/autorun.sh"
-wget ${autorun} -O /var/etc/script/multics_Start_Stop_Script.sh || echo "Error: Couldn't connect to ${multics_Start_Stop_Script}"
-chmod 755 /var/etc/script/multics_Start_Stop_Script.sh
+multics_check_script="https://github.com/sharillas/Multics_Auto/raw/main/multics_Versions/multics_check_script"
+wget ${multics_check_script} -O /var/etc/script/multics_check_script.sh || echo "Error: Couldn't connect to ${multics_check_script}"
+chmod 755 /var/etc/script/multics_check_script.sh
 
-autorun="https://github.com/sharillas/Multics_Auto/raw/main/multics_Versions/multics_Start_Stop_Script"
-wget ${autorun} -O /var/etc/script/autorun.sh || echo "Error: Couldn't connect to ${autorun}"
-chmod 755 /var/etc/script/autorun.sh
+multics_Start_Stop_Script="https://github.com/sharillas/Multics_Auto/raw/main/multics_Versions/multics_Start_Stop_Script"
+wget ${multics_Start_Stop_Script} -O /var/etc/script/multics_Start_Stop_Script.sh || echo "Error: Couldn't connect to ${multics_Start_Stop_Script}"
+chmod 755 /var/etc/script/multics_Start_Stop_Script.sh
 
 Cache="https://github.com/sharillas/Multics_Auto/raw/main/multics_Versions/Multics.r82x64/Cache.cfg"
 wget ${Cache} -O /var/etc/Cache.cfg || echo "Error: Couldn't connect to ${Cache}"
@@ -95,7 +95,7 @@ wget ${IpToCountry} -O /var/etc/IpToCountry.csv || echo "Error: Couldn't connect
 
 echo "########################## MultiCS r82_x64 ##########################" >> /etc/crontab
 
-echo "*/1 *  * * *  root    /var/etc/script/./autorun.sh >>/var/log/autorun.log" >> /etc/crontab
+echo "*/1 *  * * *  root    /var/etc/script/./multics_check_script.sh >>/var/log/multics_check_script.log" >> /etc/crontab
 echo "" >> /etc/crontab
 
 service cron restart
