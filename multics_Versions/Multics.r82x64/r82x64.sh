@@ -105,5 +105,10 @@ echo "" >> /etc/crontab
 sudo multics start
 
 service cron restart
+sleep 2
+echo " go to your webrowser http://ip_of_your_server:55000 "
+echo " User: admin "
+echo " password: admin "
+sleep 1
 
 exit 0
