@@ -7,7 +7,7 @@ echo "\033[0;41;30m
 #################################################################
 #       |-------------------------------------------|           #
 #       |        Auto Install CardServerProxy       |           #
-#       |   -----> Multics Version r82x64   <-----  |           #
+#       |   -----> Multics Version r107x64  <-----  |           #
 #       |                   2021                    |           #
 #       |       Automated Installation script       |           #
 #       |           Written by: sharillas	    |           #
@@ -36,7 +36,7 @@ show_menus() {
 	echo   ""	
 	echo  -e "\e[1;97;44m  M U L T I C S  C A R D S E R V E R P R O X Y  A U T O  I N S T A L L ${STD}"
 	echo   ""
-	echo -e "1. MultCS r82 x64 \e[33m (original by evileyes) \e[0m"
+	echo -e "1. MultCS r107 x64 \e[33m (original by evileyes) \e[0m"
 	echo "2. Exit"
 	echo ""
 echo  -e "\e[1;97;41mATENCAO!!:                                 ${STD}"
