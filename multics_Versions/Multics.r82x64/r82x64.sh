@@ -7,7 +7,7 @@ echo "\033[0;41;30m
 #################################################################
 #       |-------------------------------------------|           #
 #       |        Auto Install CardServerProxy       |           #
-#       |   -----> Multics Version r82x64   <-----  |           #
+#       |   -----> Multics Version r107x64  <-----  |           #
 #       |                   2021                    |           #
 #       |       Automated Installation script       |           #
 #       |           Written by: sharillas	    |           #
@@ -17,7 +17,7 @@ echo "\033[0;41;30m
 #################################################################"
 sleep 4
 
-echo "Installation script for automated MultiCS r82_x64 installation"
+echo "Installation script for automated MultiCS r107_x64 installation"
 echo -e "\e[5m Please Wait ...\e[0m"
 sleep 3
 echo "OK"
